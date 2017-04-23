@@ -1,0 +1,4928 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://weixsong.github.io">elasticlunr (v0.9.5)</a>
+</h1>
+<h4>Lightweight full-text search engine in Javascript for browser search and offline search.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr">module elasticlunr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.elasticlunr">
+            function <span class="apidocSignatureSpan"></span>elasticlunr
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Configuration">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>Configuration
+            <span class="apidocSignatureSpan">(config, fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>DocumentStore
+            <span class="apidocSignatureSpan">(save)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.EventEmitter">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>Index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>InvertedIndex
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>Pipeline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>SortedSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.addStopWords">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>addStopWords
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.clearStopWords">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>clearStopWords
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.resetStopWords">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>resetStopWords
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.stemmer">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>stemmer
+            <span class="apidocSignatureSpan">(w)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.stopWordFilter">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>stopWordFilter
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.tokenizer">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>tokenizer
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.trimmer">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>trimmer
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>Configuration.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>DocumentStore.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>EventEmitter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>Index.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>InvertedIndex.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>Pipeline.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>Pipeline.registeredFunctions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>SortedSet.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>defaultStopWords</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">elasticlunr.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.Configuration">module elasticlunr.Configuration</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Configuration.Configuration">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>Configuration
+            <span class="apidocSignatureSpan">(config, fields)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.Configuration.prototype">module elasticlunr.Configuration.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Configuration.prototype.addAllFields2UserConfig">
+            function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>addAllFields2UserConfig
+            <span class="apidocSignatureSpan">(bool, expand, fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Configuration.prototype.buildDefaultConfig">
+            function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>buildDefaultConfig
+            <span class="apidocSignatureSpan">(fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Configuration.prototype.buildUserConfig">
+            function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>buildUserConfig
+            <span class="apidocSignatureSpan">(config, fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Configuration.prototype.get">
+            function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>get
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Configuration.prototype.reset">
+            function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.DocumentStore">module elasticlunr.DocumentStore</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.DocumentStore">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>DocumentStore
+            <span class="apidocSignatureSpan">(save)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.load">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.</span>load
+            <span class="apidocSignatureSpan">(serialisedData)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.DocumentStore.prototype">module elasticlunr.DocumentStore.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.addDoc">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>addDoc
+            <span class="apidocSignatureSpan">(docRef, doc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.addFieldLength">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>addFieldLength
+            <span class="apidocSignatureSpan">(docRef, fieldName, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.getDoc">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>getDoc
+            <span class="apidocSignatureSpan">(docRef)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.getFieldLength">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>getFieldLength
+            <span class="apidocSignatureSpan">(docRef, fieldName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.hasDoc">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>hasDoc
+            <span class="apidocSignatureSpan">(docRef)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.isDocStored">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>isDocStored
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.removeDoc">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>removeDoc
+            <span class="apidocSignatureSpan">(docRef)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.toJSON">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.DocumentStore.prototype.updateFieldLength">
+            function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>updateFieldLength
+            <span class="apidocSignatureSpan">(docRef, fieldName, length)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.EventEmitter">module elasticlunr.EventEmitter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.EventEmitter.EventEmitter">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>EventEmitter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.EventEmitter.prototype">module elasticlunr.EventEmitter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.EventEmitter.prototype.addListener">
+            function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>addListener
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.EventEmitter.prototype.emit">
+            function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>emit
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.EventEmitter.prototype.hasHandler">
+            function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>hasHandler
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.EventEmitter.prototype.removeListener">
+            function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>removeListener
+            <span class="apidocSignatureSpan">(name, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.Index">module elasticlunr.Index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.Index">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>Index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.load">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.</span>load
+            <span class="apidocSignatureSpan">(serialisedData)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.Index.prototype">module elasticlunr.Index.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.addDoc">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>addDoc
+            <span class="apidocSignatureSpan">(doc, emitEvent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.addField">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>addField
+            <span class="apidocSignatureSpan">(fieldName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.coordNorm">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>coordNorm
+            <span class="apidocSignatureSpan">(scores, docTokens, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.fieldSearch">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>fieldSearch
+            <span class="apidocSignatureSpan">(queryTokens, fieldName, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.fieldSearchStats">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>fieldSearchStats
+            <span class="apidocSignatureSpan">(docTokens, token, docs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.getFields">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>getFields
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.idf">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>idf
+            <span class="apidocSignatureSpan">(term, field)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.mergeScores">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>mergeScores
+            <span class="apidocSignatureSpan">(accumScores, scores, op)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.off">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>off
+            <span class="apidocSignatureSpan">(name, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.on">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>on
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.removeDoc">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>removeDoc
+            <span class="apidocSignatureSpan">(doc, emitEvent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.removeDocByRef">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>removeDocByRef
+            <span class="apidocSignatureSpan">(docRef, emitEvent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.saveDocument">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>saveDocument
+            <span class="apidocSignatureSpan">(save)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.search">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>search
+            <span class="apidocSignatureSpan">(query, userConfig)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.setRef">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>setRef
+            <span class="apidocSignatureSpan">(refName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.toJSON">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.updateDoc">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>updateDoc
+            <span class="apidocSignatureSpan">(doc, emitEvent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Index.prototype.use">
+            function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>use
+            <span class="apidocSignatureSpan">(plugin)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.InvertedIndex">module elasticlunr.InvertedIndex</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.InvertedIndex">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>InvertedIndex
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.load">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.</span>load
+            <span class="apidocSignatureSpan">(serialisedData)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.InvertedIndex.prototype">module elasticlunr.InvertedIndex.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.addToken">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>addToken
+            <span class="apidocSignatureSpan">(token, tokenInfo, root)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.expandToken">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>expandToken
+            <span class="apidocSignatureSpan">(token, memo, root)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getDocFreq">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getDocFreq
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getDocs">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getDocs
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getNode">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getNode
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getTermFrequency">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getTermFrequency
+            <span class="apidocSignatureSpan">(token, docRef)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.hasToken">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>hasToken
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.removeToken">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>removeToken
+            <span class="apidocSignatureSpan">(token, ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.InvertedIndex.prototype.toJSON">
+            function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.Pipeline">module elasticlunr.Pipeline</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.Pipeline">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>Pipeline
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.getRegisteredFunction">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>getRegisteredFunction
+            <span class="apidocSignatureSpan">(label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.load">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>load
+            <span class="apidocSignatureSpan">(serialised)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.registerFunction">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>registerFunction
+            <span class="apidocSignatureSpan">(fn, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.warnIfFunctionNotRegistered">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>warnIfFunctionNotRegistered
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>registeredFunctions</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.Pipeline.prototype">module elasticlunr.Pipeline.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.add">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>add
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.after">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>after
+            <span class="apidocSignatureSpan">(existingFn, newFn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.before">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>before
+            <span class="apidocSignatureSpan">(existingFn, newFn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.get">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>get
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.remove">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>remove
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.reset">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.run">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>run
+            <span class="apidocSignatureSpan">(tokens)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.prototype.toJSON">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.Pipeline.registeredFunctions">module elasticlunr.Pipeline.registeredFunctions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.registeredFunctions.stemmer">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.registeredFunctions.</span>stemmer
+            <span class="apidocSignatureSpan">(w)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.registeredFunctions.stopWordFilter">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.registeredFunctions.</span>stopWordFilter
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.Pipeline.registeredFunctions.trimmer">
+            function <span class="apidocSignatureSpan">elasticlunr.Pipeline.registeredFunctions.</span>trimmer
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.SortedSet">module elasticlunr.SortedSet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.SortedSet">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>SortedSet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.load">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.</span>load
+            <span class="apidocSignatureSpan">(serialisedData)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.SortedSet.prototype">module elasticlunr.SortedSet.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.add">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>add
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.clone">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>clone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.forEach">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>forEach
+            <span class="apidocSignatureSpan">(fn, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.indexOf">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>indexOf
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.intersect">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>intersect
+            <span class="apidocSignatureSpan">(otherSet)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.locationFor">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>locationFor
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.map">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>map
+            <span class="apidocSignatureSpan">(fn, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.toArray">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>toArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.toJSON">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.SortedSet.prototype.union">
+            function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>union
+            <span class="apidocSignatureSpan">(otherSet)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.tokenizer">module elasticlunr.tokenizer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.tokenizer.tokenizer">
+            function <span class="apidocSignatureSpan">elasticlunr.</span>tokenizer
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.tokenizer.getSeperator">
+            function <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>getSeperator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.tokenizer.resetSeperator">
+            function <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>resetSeperator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.tokenizer.setSeperator">
+            function <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>setSeperator
+            <span class="apidocSignatureSpan">(sep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>defaultSeperator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>seperator</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticlunr.utils">module elasticlunr.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.utils.toString">
+            function <span class="apidocSignatureSpan">elasticlunr.utils.</span>toString
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticlunr.utils.warn">
+            function <span class="apidocSignatureSpan">elasticlunr.utils.</span>warn
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr" id="apidoc.module.elasticlunr">module elasticlunr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.elasticlunr" id="apidoc.element.elasticlunr.elasticlunr">
+        function <span class="apidocSignatureSpan"></span>elasticlunr
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">elasticlunr = function (config) {
+  var idx = new elasticlunr.Index;
+
+  idx.pipeline.add(
+    elasticlunr.trimmer,
+    elasticlunr.stopWordFilter,
+    elasticlunr.stemmer
+  );
+
+  if (config) config.call(idx, idx);
+
+  return idx;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Configuration" id="apidoc.element.elasticlunr.Configuration">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>Configuration
+        <span class="apidocSignatureSpan">(config, fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Configuration = function (config, fields) {
+  var config = config || '';
+
+  if (fields == undefined || fields == null) {
+    throw new Error('fields should not be null');
+  }
+
+  this.config = {};
+
+  var userConfig;
+  try {
+    userConfig = JSON.parse(config);
+    this.buildUserConfig(userConfig, fields);
+  } catch (error) {
+    elasticlunr.utils.warn('user configuration parse failed, will use default configuration');
+    this.buildDefaultConfig(fields);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!query) return [];
+
+var configStr = null;
+if (userConfig != null) {
+  configStr = JSON.stringify(userConfig);
+}
+
+var config = new elasticlunr.<span class="apidocCodeKeywordSpan">Configuration</span>(configStr, this.getFields()).get();
+
+var queryTokens = this.pipeline.run(elasticlunr.tokenizer(query));
+
+var queryResults = {};
+
+for (var field in config) {
+  var fieldSearchResults = this.fieldSearch(queryTokens, field, config);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore" id="apidoc.element.elasticlunr.DocumentStore">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>DocumentStore
+        <span class="apidocSignatureSpan">(save)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DocumentStore = function (save) {
+  if (save === null || save === undefined) {
+    this._save = true;
+  } else {
+    this._save = save;
+  }
+
+  this.docs = {};
+  this.docInfo = {};
+  this.length = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Defaultly save all the original JSON documents.
+*
+* @param {Boolean} save Whether to save the original JSON documents.
+* @return {elasticlunr.Index}
+* @memberOf Index
+*/
+elasticlunr.Index.prototype.saveDocument = function (save) {
+ this.documentStore = new elasticlunr.<span class="apidocCodeKeywordSpan">DocumentStore</span>(save);
+ return this;
+};
+
+/**
+* Add a JSON format document to the index.
+*
+* This is the way new documents enter the index, this function will run the
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.EventEmitter" id="apidoc.element.elasticlunr.EventEmitter">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">EventEmitter = function () {
+  this.events = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index" id="apidoc.element.elasticlunr.Index">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>Index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Index = function () {
+  this._fields = [];
+  this._ref = 'id';
+  this.pipeline = new elasticlunr.Pipeline;
+  this.documentStore = new elasticlunr.DocumentStore;
+  this.index = {};
+  this.eventEmitter = new elasticlunr.EventEmitter;
+  this._idfCache = {};
+
+  this.on('add', 'remove', 'update', (function () {
+    this._idfCache = {};
+  }).bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex" id="apidoc.element.elasticlunr.InvertedIndex">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>InvertedIndex
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">InvertedIndex = function () {
+  this.root = { docs: {}, df: 0 };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline" id="apidoc.element.elasticlunr.Pipeline">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>Pipeline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pipeline = function () {
+  this._queue = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet" id="apidoc.element.elasticlunr.SortedSet">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>SortedSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SortedSet = function () {
+  this.length = 0
+  this.elements = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.addStopWords" id="apidoc.element.elasticlunr.addStopWords">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>addStopWords
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addStopWords = function (words) {
+  if (words == null || Array.isArray(words) === false) return;
+
+  words.forEach(function (word) {
+    elasticlunr.stopWordFilter.stopWords[word] = true;
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### 6.2 Add customized stop words
+
+User could add a list of customized stop words.
+```javascript
+var customized_stop_words = ['an', 'hello', 'xyzabc'];
+elasticlunr.<span class="apidocCodeKeywordSpan">addStopWords</span>(customized_stop_words);
+```
+
+## 7. Use elasticlunr in Node.js
+
+Elasticlunr support Node.js, you could use elastilunr in node.js as a node-module.
+
+Install elasticlunr by:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.clearStopWords" id="apidoc.element.elasticlunr.clearStopWords">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>clearStopWords
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearStopWords = function () {
+  elasticlunr.stopWordFilter.stopWords = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Defaultly elasticlunr.js contains **120** stop words, user could decide not use these default stop words or add customized stop
+words.
+
+### 6.1 Remove default stop words
+
+You could remove default stop words simply as:
+```javascript
+elasticlunr.<span class="apidocCodeKeywordSpan">clearStopWords</span>();
+```
+
+### 6.2 Add customized stop words
+
+User could add a list of customized stop words.
+```javascript
+var customized_stop_words = ['an', 'hello', 'xyzabc'];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.resetStopWords" id="apidoc.element.elasticlunr.resetStopWords">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>resetStopWords
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetStopWords = function () {
+  elasticlunr.stopWordFilter.stopWords = elasticlunr.defaultStopWords;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.stemmer" id="apidoc.element.elasticlunr.stemmer">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>stemmer
+        <span class="apidocSignatureSpan">(w)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function porterStemmer(w) {
+  var   stem,
+    suffix,
+    firstch,
+    re,
+    re2,
+    re3,
+    re4;
+
+  if (w.length &lt; 3) { return w; }
+
+  firstch = w.substr(0,1);
+  if (firstch == "y") {
+    w = firstch.toUpperCase() + w.substr(1);
+  }
+
+  // Step 1a
+  re = re_1a
+  re2 = re2_1a;
+
+  if (re.test(w)) { w = w.replace(re,"$1$2"); }
+  else if (re2.test(w)) { w = w.replace(re2,"$1$2"); }
+
+  // Step 1b
+  re = re_1b;
+  re2 = re2_1b;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    re = re_mgr0;
+    if (re.test(fp[1])) {
+      re = re_1b_2;
+      w = w.replace(re,"");
+    }
+  } else if (re2.test(w)) {
+    var fp = re2.exec(w);
+    stem = fp[1];
+    re2 = re_s_v;
+    if (re2.test(stem)) {
+      w = stem;
+      re2 = re2_1b_2;
+      re3 = re3_1b_2;
+      re4 = re4_1b_2;
+      if (re2.test(w)) {  w = w + "e"; }
+      else if (re3.test(w)) { re = re_1b_2; w = w.replace(re,""); }
+      else if (re4.test(w)) { w = w + "e"; }
+    }
+  }
+
+  // Step 1c - replace suffix y or Y by i if preceded by a non-vowel which is not the first letter of the word (so cry -&gt; cri, by
+ -&gt; by, say -&gt; say)
+  re = re_1c;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    w = stem + "i";
+  }
+
+  // Step 2
+  re = re_2;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    suffix = fp[2];
+    re = re_mgr0;
+    if (re.test(stem)) {
+      w = stem + step2list[suffix];
+    }
+  }
+
+  // Step 3
+  re = re_3;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    suffix = fp[2];
+    re = re_mgr0;
+    if (re.test(stem)) {
+      w = stem + step3list[suffix];
+    }
+  }
+
+  // Step 4
+  re = re_4;
+  re2 = re2_4;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    re = re_mgr1;
+    if (re.test(stem)) {
+      w = stem;
+    }
+  } else if (re2.test(w)) {
+    var fp = re2.exec(w);
+    stem = fp[1] + fp[2];
+    re2 = re_mgr1;
+    if (re2.test(stem)) {
+      w = stem;
+    }
+  }
+
+  // Step 5
+  re = re_5;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    re = re_mgr1;
+    re2 = re_meq1;
+    re3 = re3_5;
+    if (re.test(stem) || (re2.test(stem) &amp;&amp; !(re3.test(stem)))) {
+      w = stem;
+    }
+  }
+
+  re = re_5_1;
+  re2 = re_mgr1;
+  if (re.test(w) &amp;&amp; re2.test(w)) {
+    re = re_1b_2;
+    w = w.replace(re,"");
+  }
+
+  // and turn initial Y back to y
+
+  if (firstch == "y") {
+    w = firstch.toLowerCase() + w.substr(1);
+  }
+
+  return w;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.stopWordFilter" id="apidoc.element.elasticlunr.stopWordFilter">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>stopWordFilter
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopWordFilter = function (token) {
+  if (token &amp;&amp; elasticlunr.stopWordFilter.stopWords[token] !== true) {
+    return token;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.tokenizer" id="apidoc.element.elasticlunr.tokenizer">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>tokenizer
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tokenizer = function (str) {
+  if (!arguments.length || str === null || str === undefined) return [];
+  if (Array.isArray(str)) {
+    var arr = str.filter(function(token) {
+      if (token === null || token === undefined) {
+        return false;
+      }
+
+      return true;
+    });
+
+    arr = arr.map(function (t) {
+      return elasticlunr.utils.toString(t).toLowerCase();
+    });
+
+    var out = [];
+    arr.forEach(function(item) {
+      var tokens = item.split(elasticlunr.tokenizer.seperator);
+      out = out.concat(tokens);
+    }, this);
+
+    return out;
+  }
+
+  return str.toString().trim().toLowerCase().split(elasticlunr.tokenizer.seperator);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!doc) return;
+  var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+  var docRef = doc[this._ref];
+
+  this.documentStore.addDoc(docRef, doc);
+  this._fields.forEach(function (field) {
+var fieldTokens = this.pipeline.run(elasticlunr.<span class="apidocCodeKeywordSpan">tokenizer</span>(doc[field]));
+this.documentStore.addFieldLength(docRef, field, fieldTokens.length);
+
+var tokenCount = {};
+fieldTokens.forEach(function (token) {
+  if (token in tokenCount) tokenCount[token] += 1;
+  else tokenCount[token] = 1;
+}, this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.trimmer" id="apidoc.element.elasticlunr.trimmer">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>trimmer
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trimmer = function (token) {
+  if (token === null || token === undefined) {
+    throw new Error('token should not be undefined');
+  }
+
+  return token
+    .replace(/^\W+/, '')
+    .replace(/\W+$/, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.Configuration" id="apidoc.module.elasticlunr.Configuration">module elasticlunr.Configuration</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Configuration.Configuration" id="apidoc.element.elasticlunr.Configuration.Configuration">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>Configuration
+        <span class="apidocSignatureSpan">(config, fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Configuration = function (config, fields) {
+  var config = config || '';
+
+  if (fields == undefined || fields == null) {
+    throw new Error('fields should not be null');
+  }
+
+  this.config = {};
+
+  var userConfig;
+  try {
+    userConfig = JSON.parse(config);
+    this.buildUserConfig(userConfig, fields);
+  } catch (error) {
+    elasticlunr.utils.warn('user configuration parse failed, will use default configuration');
+    this.buildDefaultConfig(fields);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!query) return [];
+
+var configStr = null;
+if (userConfig != null) {
+  configStr = JSON.stringify(userConfig);
+}
+
+var config = new elasticlunr.<span class="apidocCodeKeywordSpan">Configuration</span>(configStr, this.getFields()).get();
+
+var queryTokens = this.pipeline.run(elasticlunr.tokenizer(query));
+
+var queryResults = {};
+
+for (var field in config) {
+  var fieldSearchResults = this.fieldSearch(queryTokens, field, config);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.Configuration.prototype" id="apidoc.module.elasticlunr.Configuration.prototype">module elasticlunr.Configuration.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Configuration.prototype.addAllFields2UserConfig" id="apidoc.element.elasticlunr.Configuration.prototype.addAllFields2UserConfig">
+        function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>addAllFields2UserConfig
+        <span class="apidocSignatureSpan">(bool, expand, fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addAllFields2UserConfig = function (bool, expand, fields) {
+  fields.forEach(function (field) {
+    this.config[field] = {
+      boost: 1,
+      bool: bool,
+      expand: expand
+    };
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+         expand: field_expand
+       };
+     } else {
+       elasticlunr.utils.warn('field name in user configuration not found in index instance fields');
+     }
+   }
+ } else {
+   this.<span class="apidocCodeKeywordSpan">addAllFields2UserConfig</span>(global_bool, global_expand, fields);
+ }
+};
+
+/**
+* Add all fields to user search configuration.
+*
+* @param {String} bool Boolean model
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Configuration.prototype.buildDefaultConfig" id="apidoc.element.elasticlunr.Configuration.prototype.buildDefaultConfig">
+        function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>buildDefaultConfig
+        <span class="apidocSignatureSpan">(fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildDefaultConfig = function (fields) {
+  this.reset();
+  fields.forEach(function (field) {
+    this.config[field] = {
+      boost: 1,
+      bool: "OR",
+      expand: false
+    };
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ var userConfig;
+ try {
+   userConfig = JSON.parse(config);
+   this.buildUserConfig(userConfig, fields);
+ } catch (error) {
+   elasticlunr.utils.warn('user configuration parse failed, will use default configuration');
+   this.<span class="apidocCodeKeywordSpan">buildDefaultConfig</span>(fields);
+ }
+};
+
+/**
+* Build default search configuration.
+*
+* @param {Array} fields fields of index instance
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Configuration.prototype.buildUserConfig" id="apidoc.element.elasticlunr.Configuration.prototype.buildUserConfig">
+        function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>buildUserConfig
+        <span class="apidocSignatureSpan">(config, fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildUserConfig = function (config, fields) {
+  var global_bool = "OR";
+  var global_expand = false;
+
+  this.reset();
+  if ('bool' in config) {
+    global_bool = config['bool'] || global_bool;
+  }
+
+  if ('expand' in config) {
+    global_expand = config['expand'] || global_expand;
+  }
+
+  if ('fields' in config) {
+    for (var field in config['fields']) {
+      if (fields.indexOf(field) &gt; -1) {
+        var field_config = config['fields'][field];
+        var field_expand = global_expand;
+        if (field_config.expand != undefined) {
+          field_expand = field_config.expand;
+        }
+
+        this.config[field] = {
+          boost: (field_config.boost || field_config.boost === 0) ? field_config.boost : 1,
+          bool: field_config.bool || global_bool,
+          expand: field_expand
+        };
+      } else {
+        elasticlunr.utils.warn('field name in user configuration not found in index instance fields');
+      }
+    }
+  } else {
+    this.addAllFields2UserConfig(global_bool, global_expand, fields);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  this.config = {};
+
+  var userConfig;
+  try {
+    userConfig = JSON.parse(config);
+    this.<span class="apidocCodeKeywordSpan">buildUserConfig</span>(userConfig, fields);
+  } catch (error) {
+    elasticlunr.utils.warn('user configuration parse failed, will use default configuration');
+    this.buildDefaultConfig(fields);
+  }
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Configuration.prototype.get" id="apidoc.element.elasticlunr.Configuration.prototype.get">
+        function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>get
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function () {
+  return this.config;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!query) return [];
+
+var configStr = null;
+if (userConfig != null) {
+  configStr = JSON.stringify(userConfig);
+}
+
+var config = new elasticlunr.Configuration(configStr, this.getFields()).<span class="apidocCodeKeywordSpan">get</span>();
+
+var queryTokens = this.pipeline.run(elasticlunr.tokenizer(query));
+
+var queryResults = {};
+
+for (var field in config) {
+  var fieldSearchResults = this.fieldSearch(queryTokens, field, config);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Configuration.prototype.reset" id="apidoc.element.elasticlunr.Configuration.prototype.reset">
+        function <span class="apidocSignatureSpan">elasticlunr.Configuration.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+  this.config = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Build default search configuration.
+ *
+ * @param {Array} fields fields of index instance
+ */
+elasticlunr.Configuration.prototype.buildDefaultConfig = function (fields) {
+this.<span class="apidocCodeKeywordSpan">reset</span>();
+fields.forEach(function (field) {
+  this.config[field] = {
+    boost: 1,
+    bool: "OR",
+    expand: false
+  };
+}, this);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.DocumentStore" id="apidoc.module.elasticlunr.DocumentStore">module elasticlunr.DocumentStore</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.DocumentStore" id="apidoc.element.elasticlunr.DocumentStore.DocumentStore">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>DocumentStore
+        <span class="apidocSignatureSpan">(save)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DocumentStore = function (save) {
+  if (save === null || save === undefined) {
+    this._save = true;
+  } else {
+    this._save = save;
+  }
+
+  this.docs = {};
+  this.docInfo = {};
+  this.length = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Defaultly save all the original JSON documents.
+*
+* @param {Boolean} save Whether to save the original JSON documents.
+* @return {elasticlunr.Index}
+* @memberOf Index
+*/
+elasticlunr.Index.prototype.saveDocument = function (save) {
+ this.documentStore = new elasticlunr.<span class="apidocCodeKeywordSpan">DocumentStore</span>(save);
+ return this;
+};
+
+/**
+* Add a JSON format document to the index.
+*
+* This is the way new documents enter the index, this function will run the
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.load" id="apidoc.element.elasticlunr.DocumentStore.load">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.</span>load
+        <span class="apidocSignatureSpan">(serialisedData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (serialisedData) {
+  var store = new this;
+
+  store.length = serialisedData.length;
+  store.docs = serialisedData.docs;
+  store.docInfo = serialisedData.docInfo;
+  store._save = serialisedData.save;
+
+  return store;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                  + elasticlunr.version + ' importing ' + serialisedData.version);
+}
+
+var idx = new this;
+
+idx._fields = serialisedData.fields;
+idx._ref = serialisedData.ref;
+idx.documentStore = elasticlunr.DocumentStore.<span class="apidocCodeKeywordSpan">load</span>(serialisedData.documentStore);
+idx.pipeline = elasticlunr.Pipeline.load(serialisedData.pipeline);
+idx.index = {};
+for (var field in serialisedData.index) {
+  idx.index[field] = elasticlunr.InvertedIndex.load(serialisedData.index[field]);
+}
+
+return idx;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.DocumentStore.prototype" id="apidoc.module.elasticlunr.DocumentStore.prototype">module elasticlunr.DocumentStore.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.addDoc" id="apidoc.element.elasticlunr.DocumentStore.prototype.addDoc">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>addDoc
+        <span class="apidocSignatureSpan">(docRef, doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addDoc = function (docRef, doc) {
+  if (!this.hasDoc(docRef)) this.length++;
+
+  if (this._save === true) {
+    this.docs[docRef] = clone(doc);
+  } else {
+    this.docs[docRef] = null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var doc2 = {
+    "id": 2,
+    "title": "Oracle released its profit report of 2015",
+    "body": "As expected, Oracle released its profit report of 2015, during the good sales of database and hardware
+, Oracle's profit of 2015 reached 12.5 Billion."
+}
+
+index.<span class="apidocCodeKeywordSpan">addDoc</span>(doc1);
+index.addDoc(doc2);
+```
+
+Then searching is as simple:
+
+```javascript
+index.search("Oracle database profit");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.addFieldLength" id="apidoc.element.elasticlunr.DocumentStore.prototype.addFieldLength">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>addFieldLength
+        <span class="apidocSignatureSpan">(docRef, fieldName, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addFieldLength = function (docRef, fieldName, length) {
+  if (docRef === null || docRef === undefined) return;
+  if (this.hasDoc(docRef) == false) return;
+
+  if (!this.docInfo[docRef]) this.docInfo[docRef] = {};
+  this.docInfo[docRef][fieldName] = length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+  var docRef = doc[this._ref];
+
+  this.documentStore.addDoc(docRef, doc);
+  this._fields.forEach(function (field) {
+var fieldTokens = this.pipeline.run(elasticlunr.tokenizer(doc[field]));
+this.documentStore.<span class="apidocCodeKeywordSpan">addFieldLength</span>(docRef, field, fieldTokens.length);
+
+var tokenCount = {};
+fieldTokens.forEach(function (token) {
+  if (token in tokenCount) tokenCount[token] += 1;
+  else tokenCount[token] = 1;
+}, this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.getDoc" id="apidoc.element.elasticlunr.DocumentStore.prototype.getDoc">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>getDoc
+        <span class="apidocSignatureSpan">(docRef)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDoc = function (docRef) {
+  if (this.hasDoc(docRef) === false) return null;
+  return this.docs[docRef];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+elasticlunr.Index.prototype.removeDocByRef = function (docRef, emitEvent) {
+ if (!docRef) return;
+ if (this.documentStore.isDocStored() === false) {
+   return;
+ }
+
+ if (!this.documentStore.hasDoc(docRef)) return;
+ var doc = this.documentStore.<span class="apidocCodeKeywordSpan">getDoc</span>(docRef);
+ this.removeDoc(doc, false);
+};
+
+/**
+* Removes a document from the index.
+* This remove operation could work even the original doc is not store in the DocumentStore.
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.getFieldLength" id="apidoc.element.elasticlunr.DocumentStore.prototype.getFieldLength">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>getFieldLength
+        <span class="apidocSignatureSpan">(docRef, fieldName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFieldLength = function (docRef, fieldName) {
+  if (docRef === null || docRef === undefined) return 0;
+
+  if (!(docRef in this.docs)) return 0;
+  if (!(fieldName in this.docInfo[docRef])) return 0;
+  return this.docInfo[docRef][fieldName];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // coordNorm
+      if (key == token) {
+this.fieldSearchStats(docTokens, key, docs);
+      }
+
+      for (var docRef in docs) {
+var tf = this.index[fieldName].getTermFrequency(key, docRef);
+var fieldLength = this.documentStore.<span class="apidocCodeKeywordSpan">getFieldLength</span>(docRef, fieldName);
+var fieldLengthNorm = 1;
+if (fieldLength != 0) {
+  fieldLengthNorm = 1 / Math.sqrt(fieldLength);
+}
+
+var penality = 1;
+if (key != token) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.hasDoc" id="apidoc.element.elasticlunr.DocumentStore.prototype.hasDoc">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>hasDoc
+        <span class="apidocSignatureSpan">(docRef)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasDoc = function (docRef) {
+  return docRef in this.docs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+elasticlunr.Index.prototype.removeDocByRef = function (docRef, emitEvent) {
+ if (!docRef) return;
+ if (this.documentStore.isDocStored() === false) {
+   return;
+ }
+
+ if (!this.documentStore.<span class="apidocCodeKeywordSpan">hasDoc</span>(docRef)) return;
+ var doc = this.documentStore.getDoc(docRef);
+ this.removeDoc(doc, false);
+};
+
+/**
+* Removes a document from the index.
+* This remove operation could work even the original doc is not store in the DocumentStore.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.isDocStored" id="apidoc.element.elasticlunr.DocumentStore.prototype.isDocStored">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>isDocStored
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDocStored = function () {
+  return this._save;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {String|Integer} docRef The document ref to remove from the index.
+ * @param {Boolean} emitEvent Whether to emit remove events, defaults to true
+ * @memberOf Index
+ */
+elasticlunr.Index.prototype.removeDocByRef = function (docRef, emitEvent) {
+  if (!docRef) return;
+  if (this.documentStore.<span class="apidocCodeKeywordSpan">isDocStored</span>() === false) {
+    return;
+  }
+
+  if (!this.documentStore.hasDoc(docRef)) return;
+  var doc = this.documentStore.getDoc(docRef);
+  this.removeDoc(doc, false);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.removeDoc" id="apidoc.element.elasticlunr.DocumentStore.prototype.removeDoc">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>removeDoc
+        <span class="apidocSignatureSpan">(docRef)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeDoc = function (docRef) {
+  if (!this.hasDoc(docRef)) return;
+
+  delete this.docs[docRef];
+  delete this.docInfo[docRef];
+  this.length--;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+index.addDoc(doc2);
+```
+
+If your JSON document contains field that not configured in index, then that field will not be indexed, which means that field is
+ not searchable.
+
+## 3. Remove document from index
+
+Elasticlunr.js support remove a document from index, just provide JSON document to &lt;code&gt;elasticlunr.Index.prototype.&lt;
+span class="apidocCodeKeywordSpan"&gt;removeDoc()&lt;/code&gt; function.
+
+For example:
+```javascript
+var doc = {
+"id": 1,
+"title": "Oracle released its latest database Oracle 12g",
+"body": "Yestaday Oracle has released its new database Oracle 12g, this would make more money for this company and
+ lead to a nice profit report of annual year."
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.toJSON" id="apidoc.element.elasticlunr.DocumentStore.prototype.toJSON">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return {
+    docs: this.docs,
+    docInfo: this.docInfo,
+    length: this.length,
+    save: this._save
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @return {Object}
+ * @memberOf Index
+ */
+elasticlunr.Index.prototype.toJSON = function () {
+var indexJson = {};
+this._fields.forEach(function (field) {
+  indexJson[field] = this.index[field].<span class="apidocCodeKeywordSpan">toJSON</span>();
+}, this);
+
+return {
+  version: elasticlunr.version,
+  fields: this._fields,
+  ref: this._ref,
+  documentStore: this.documentStore.toJSON(),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.DocumentStore.prototype.updateFieldLength" id="apidoc.element.elasticlunr.DocumentStore.prototype.updateFieldLength">
+        function <span class="apidocSignatureSpan">elasticlunr.DocumentStore.prototype.</span>updateFieldLength
+        <span class="apidocSignatureSpan">(docRef, fieldName, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateFieldLength = function (docRef, fieldName, length) {
+  if (docRef === null || docRef === undefined) return;
+  if (this.hasDoc(docRef) == false) return;
+
+  this.addFieldLength(docRef, fieldName, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.EventEmitter" id="apidoc.module.elasticlunr.EventEmitter">module elasticlunr.EventEmitter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.EventEmitter.EventEmitter" id="apidoc.element.elasticlunr.EventEmitter.EventEmitter">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>EventEmitter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">EventEmitter = function () {
+  this.events = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.EventEmitter.prototype" id="apidoc.module.elasticlunr.EventEmitter.prototype">module elasticlunr.EventEmitter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.EventEmitter.prototype.addListener" id="apidoc.element.elasticlunr.EventEmitter.prototype.addListener">
+        function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>addListener
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function () {
+  var args = Array.prototype.slice.call(arguments),
+      fn = args.pop(),
+      names = args;
+
+  if (typeof fn !== "function") throw new TypeError ("last argument must be a function");
+
+  names.forEach(function (name) {
+    if (!this.hasHandler(name)) this.events[name] = [];
+    this.events[name].push(fn);
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.EventEmitter.prototype.emit" id="apidoc.element.elasticlunr.EventEmitter.prototype.emit">
+        function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>emit
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function (name) {
+  if (!this.hasHandler(name)) return;
+
+  var args = Array.prototype.slice.call(arguments, 1);
+
+  this.events[name].forEach(function (fn) {
+    fn.apply(undefined, args);
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   for (var token in tokenCount) {
+     var termFrequency = tokenCount[token];
+     termFrequency = Math.sqrt(termFrequency);
+     this.index[field].addToken(token, { ref: docRef, tf: termFrequency });
+   }
+ }, this);
+
+ if (emitEvent) this.eventEmitter.<span class="apidocCodeKeywordSpan">emit</span>('add', doc, this);
+};
+
+/**
+* Removes a document from the index by doc ref.
+*
+* To make sure documents no longer show up in search results they can be
+* removed from the index using this method.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.EventEmitter.prototype.hasHandler" id="apidoc.element.elasticlunr.EventEmitter.prototype.hasHandler">
+        function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>hasHandler
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasHandler = function (name) {
+  return name in this.events;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ var args = Array.prototype.slice.call(arguments),
+     fn = args.pop(),
+     names = args;
+
+ if (typeof fn !== "function") throw new TypeError ("last argument must be a function");
+
+ names.forEach(function (name) {
+   if (!this.<span class="apidocCodeKeywordSpan">hasHandler</span>(name)) this.events[name] = [];
+   this.events[name].push(fn);
+ }, this);
+};
+
+/**
+* Removes a handler function from a specific event.
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.EventEmitter.prototype.removeListener" id="apidoc.element.elasticlunr.EventEmitter.prototype.removeListener">
+        function <span class="apidocSignatureSpan">elasticlunr.EventEmitter.prototype.</span>removeListener
+        <span class="apidocSignatureSpan">(name, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeListener = function (name, fn) {
+  if (!this.hasHandler(name)) return;
+
+  var fnIndex = this.events[name].indexOf(fn);
+  if (fnIndex === -1) return;
+
+  this.events[name].splice(fnIndex, 1);
+
+  if (this.events[name].length == 0) delete this.events[name];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Removes a handler from an event being emitted by the index.
+*
+* @param {String} eventName The name of events to remove the function from.
+* @param {Function} fn The serialised set to load.
+* @memberOf Index
+*/
+elasticlunr.Index.prototype.off = function (name, fn) {
+ return this.eventEmitter.<span class="apidocCodeKeywordSpan">removeListener</span>(name, fn);
+};
+
+/**
+* Loads a previously serialised index.
+*
+* Issues a warning if the index being imported was serialised
+* by a different version of elasticlunr.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.Index" id="apidoc.module.elasticlunr.Index">module elasticlunr.Index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.Index" id="apidoc.element.elasticlunr.Index.Index">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>Index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Index = function () {
+  this._fields = [];
+  this._ref = 'id';
+  this.pipeline = new elasticlunr.Pipeline;
+  this.documentStore = new elasticlunr.DocumentStore;
+  this.index = {};
+  this.eventEmitter = new elasticlunr.EventEmitter;
+  this._idfCache = {};
+
+  this.on('add', 'remove', 'update', (function () {
+    this._idfCache = {};
+  }).bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.load" id="apidoc.element.elasticlunr.Index.load">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.</span>load
+        <span class="apidocSignatureSpan">(serialisedData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (serialisedData) {
+  if (serialisedData.version !== elasticlunr.version) {
+    elasticlunr.utils.warn('version mismatch: current '
+                    + elasticlunr.version + ' importing ' + serialisedData.version);
+  }
+
+  var idx = new this;
+
+  idx._fields = serialisedData.fields;
+  idx._ref = serialisedData.ref;
+  idx.documentStore = elasticlunr.DocumentStore.load(serialisedData.documentStore);
+  idx.pipeline = elasticlunr.Pipeline.load(serialisedData.pipeline);
+  idx.index = {};
+  for (var field in serialisedData.index) {
+    idx.index[field] = elasticlunr.InvertedIndex.load(serialisedData.index[field]);
+  }
+
+  return idx;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                  + elasticlunr.version + ' importing ' + serialisedData.version);
+}
+
+var idx = new this;
+
+idx._fields = serialisedData.fields;
+idx._ref = serialisedData.ref;
+idx.documentStore = elasticlunr.DocumentStore.<span class="apidocCodeKeywordSpan">load</span>(serialisedData.documentStore);
+idx.pipeline = elasticlunr.Pipeline.load(serialisedData.pipeline);
+idx.index = {};
+for (var field in serialisedData.index) {
+  idx.index[field] = elasticlunr.InvertedIndex.load(serialisedData.index[field]);
+}
+
+return idx;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.Index.prototype" id="apidoc.module.elasticlunr.Index.prototype">module elasticlunr.Index.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.addDoc" id="apidoc.element.elasticlunr.Index.prototype.addDoc">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>addDoc
+        <span class="apidocSignatureSpan">(doc, emitEvent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addDoc = function (doc, emitEvent) {
+  if (!doc) return;
+  var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+  var docRef = doc[this._ref];
+
+  this.documentStore.addDoc(docRef, doc);
+  this._fields.forEach(function (field) {
+    var fieldTokens = this.pipeline.run(elasticlunr.tokenizer(doc[field]));
+    this.documentStore.addFieldLength(docRef, field, fieldTokens.length);
+
+    var tokenCount = {};
+    fieldTokens.forEach(function (token) {
+      if (token in tokenCount) tokenCount[token] += 1;
+      else tokenCount[token] = 1;
+    }, this);
+
+    for (var token in tokenCount) {
+      var termFrequency = tokenCount[token];
+      termFrequency = Math.sqrt(termFrequency);
+      this.index[field].addToken(token, { ref: docRef, tf: termFrequency });
+    }
+  }, this);
+
+  if (emitEvent) this.eventEmitter.emit('add', doc, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var doc2 = {
+    "id": 2,
+    "title": "Oracle released its profit report of 2015",
+    "body": "As expected, Oracle released its profit report of 2015, during the good sales of database and hardware
+, Oracle's profit of 2015 reached 12.5 Billion."
+}
+
+index.<span class="apidocCodeKeywordSpan">addDoc</span>(doc1);
+index.addDoc(doc2);
+```
+
+Then searching is as simple:
+
+```javascript
+index.search("Oracle database profit");
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.addField" id="apidoc.element.elasticlunr.Index.prototype.addField">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>addField
+        <span class="apidocSignatureSpan">(fieldName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addField = function (fieldName) {
+  this._fields.push(fieldName);
+  this.index[fieldName] = new elasticlunr.InvertedIndex;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Example
+
+A very simple search index can be created using the following scripts:
+
+```javascript
+var index = elasticlunr(function () {
+    this.<span class="apidocCodeKeywordSpan">addField</span>('title');
+    this.addField('body');
+    this.setRef('id');
+});
+```
+
+Adding documents to the index is as simple as:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.coordNorm" id="apidoc.element.elasticlunr.Index.prototype.coordNorm">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>coordNorm
+        <span class="apidocSignatureSpan">(scores, docTokens, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">coordNorm = function (scores, docTokens, n) {
+  for (var doc in scores) {
+    if (!(doc in docTokens)) continue;
+    var tokens = docTokens[doc].length;
+    scores[doc] = scores[doc] * tokens / n;
+  }
+
+  return scores;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       }
+     }
+   }, this);
+
+   scores = this.mergeScores(scores, queryTokenScores, booleanType);
+ }, this);
+
+ scores = this.<span class="apidocCodeKeywordSpan">coordNorm</span>(scores, docTokens, queryTokens.length);
+ return scores;
+};
+
+/**
+* Merge the scores from one set of tokens into an accumulated score table.
+* Exact operation depends on the op parameter. If op is 'AND', then only the
+* intersection of the two score lists is retained. Otherwise, the union of
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.fieldSearch" id="apidoc.element.elasticlunr.Index.prototype.fieldSearch">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>fieldSearch
+        <span class="apidocSignatureSpan">(queryTokens, fieldName, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fieldSearch = function (queryTokens, fieldName, config) {
+  var booleanType = config[fieldName].bool;
+  var expand = config[fieldName].expand;
+  var boost = config[fieldName].boost;
+  var scores = null;
+  var docTokens = {};
+
+  // Do nothing if the boost is 0
+  if (boost === 0) {
+    return;
+  }
+
+  queryTokens.forEach(function (token) {
+    var tokens = [token];
+    if (expand == true) {
+      tokens = this.index[fieldName].expandToken(token);
+    }
+    // Consider every query token in turn. If expanded, each query token
+    // corresponds to a set of tokens, which is all tokens in the
+    // index matching the pattern queryToken* .
+    // For the set of tokens corresponding to a query token, find and score
+    // all matching documents. Store those scores in queryTokenScores,
+    // keyed by docRef.
+    // Then, depending on the value of booleanType, combine the scores
+    // for this query token with previous scores.  If booleanType is OR,
+    // then merge the scores by summing into the accumulated total, adding
+    // new document scores are required (effectively a union operator).
+    // If booleanType is AND, accumulate scores only if the document
+    // has previously been scored by another query token (an intersection
+    // operation0.
+    // Furthermore, since when booleanType is AND, additional
+    // query tokens can't add new documents to the result set, use the
+    // current document set to limit the processing of each new query
+    // token for efficiency (i.e., incremental intersection).
+
+    var queryTokenScores = {};
+    tokens.forEach(function (key) {
+      var docs = this.index[fieldName].getDocs(key);
+      var idf = this.idf(key, fieldName);
+
+      if (scores &amp;&amp; booleanType == 'AND') {
+          // special case, we can rule out documents that have been
+          // already been filtered out because they weren't scored
+          // by previous query token passes.
+          var filteredDocs = {};
+          for (var docRef in scores) {
+              if (docRef in docs) {
+                  filteredDocs[docRef] = docs[docRef];
+              }
+          }
+          docs = filteredDocs;
+      }
+      // only record appeared token for retrieved documents for the
+      // original token, not for expaned token.
+      // beause for doing coordNorm for a retrieved document, coordNorm only care how many
+      // query token appear in that document.
+      // so expanded token should not be added into docTokens, if added, this will pollute the
+      // coordNorm
+      if (key == token) {
+        this.fieldSearchStats(docTokens, key, docs);
+      }
+
+      for (var docRef in docs) {
+        var tf = this.index[fieldName].getTermFrequency(key, docRef);
+        var fieldLength = this.documentStore.getFieldLength(docRef, fieldName);
+        var fieldLengthNorm = 1;
+        if (fieldLength != 0) {
+          fieldLengthNorm = 1 / Math.sqrt(fieldLength);
+        }
+
+        var penality = 1;
+        if (key != token) {
+          // currently I'm not sure if this penality is enough,
+          // need to do verification
+          penality = (1 - (key.length - token.length) / key.length) * 0.15;
+        }
+
+        var score = tf * idf * fieldLengthNorm * penality;
+
+        if (docRef in queryTokenScores) {
+          queryTokenScores[docRef] += score;
+        } else {
+          queryTokenScores[docRef] = score;
+        }
+      }
+    }, this);
+
+    scores = this.mergeScores(scores, queryTokenScores, booleanType);
+  }, this);
+
+  scores = this.coordNorm(scores, docTokens, queryTokens.length);
+  return scores;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var config = new elasticlunr.Configuration(configStr, this.getFields()).get();
+
+  var queryTokens = this.pipeline.run(elasticlunr.tokenizer(query));
+
+  var queryResults = {};
+
+  for (var field in config) {
+var fieldSearchResults = this.<span class="apidocCodeKeywordSpan">fieldSearch</span>(queryTokens, field, config);
+var fieldBoost = config[field].boost;
+
+for (var docRef in fieldSearchResults) {
+  fieldSearchResults[docRef] = fieldSearchResults[docRef] * fieldBoost;
+}
+
+for (var docRef in fieldSearchResults) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.fieldSearchStats" id="apidoc.element.elasticlunr.Index.prototype.fieldSearchStats">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>fieldSearchStats
+        <span class="apidocSignatureSpan">(docTokens, token, docs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fieldSearchStats = function (docTokens, token, docs) {
+  for (var doc in docs) {
+    if (doc in docTokens) {
+      docTokens[doc].push(token);
+    } else {
+      docTokens[doc] = [token];
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// only record appeared token for retrieved documents for the
+// original token, not for expaned token.
+// beause for doing coordNorm for a retrieved document, coordNorm only care how many
+// query token appear in that document.
+// so expanded token should not be added into docTokens, if added, this will pollute the
+// coordNorm
+if (key == token) {
+  this.<span class="apidocCodeKeywordSpan">fieldSearchStats</span>(docTokens, key, docs);
+}
+
+for (var docRef in docs) {
+  var tf = this.index[fieldName].getTermFrequency(key, docRef);
+  var fieldLength = this.documentStore.getFieldLength(docRef, fieldName);
+  var fieldLengthNorm = 1;
+  if (fieldLength != 0) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.getFields" id="apidoc.element.elasticlunr.Index.prototype.getFields">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>getFields
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFields = function () {
+  return this._fields.slice();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!query) return [];
+
+var configStr = null;
+if (userConfig != null) {
+  configStr = JSON.stringify(userConfig);
+}
+
+var config = new elasticlunr.Configuration(configStr, this.<span class="apidocCodeKeywordSpan">getFields</span>()).get();
+
+var queryTokens = this.pipeline.run(elasticlunr.tokenizer(query));
+
+var queryResults = {};
+
+for (var field in config) {
+  var fieldSearchResults = this.fieldSearch(queryTokens, field, config);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.idf" id="apidoc.element.elasticlunr.Index.prototype.idf">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>idf
+        <span class="apidocSignatureSpan">(term, field)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">idf = function (term, field) {
+  var cacheKey = "@" + field + '/' + term;
+  if (Object.prototype.hasOwnProperty.call(this._idfCache, cacheKey)) return this._idfCache[cacheKey];
+
+  var df = this.index[field].getDocFreq(term);
+  var idf = 1 + Math.log(this.documentStore.length / (df + 1));
+  this._idfCache[cacheKey] = idf;
+
+  return idf;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// query tokens can't add new documents to the result set, use the
+// current document set to limit the processing of each new query
+// token for efficiency (i.e., incremental intersection).
+
+var queryTokenScores = {};
+tokens.forEach(function (key) {
+  var docs = this.index[fieldName].getDocs(key);
+  var idf = this.<span class="apidocCodeKeywordSpan">idf</span>(key, fieldName);
+
+  if (scores &amp;&amp; booleanType == 'AND') {
+      // special case, we can rule out documents that have been
+      // already been filtered out because they weren't scored
+      // by previous query token passes.
+      var filteredDocs = {};
+      for (var docRef in scores) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.mergeScores" id="apidoc.element.elasticlunr.Index.prototype.mergeScores">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>mergeScores
+        <span class="apidocSignatureSpan">(accumScores, scores, op)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeScores = function (accumScores, scores, op) {
+    if (!accumScores) {
+        return scores;
+    }
+    if (op == 'AND') {
+        var intersection = {};
+        for (var docRef in scores) {
+            if (docRef in accumScores) {
+                intersection[docRef] = accumScores[docRef] + scores[docRef];
+            }
+        }
+        return intersection;
+    } else {
+        for (var docRef in scores) {
+            if (docRef in accumScores) {
+                accumScores[docRef] += scores[docRef];
+            } else {
+                accumScores[docRef] = scores[docRef];
+            }
+        }
+        return accumScores;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+          queryTokenScores[docRef] += score;
+        } else {
+          queryTokenScores[docRef] = score;
+        }
+      }
+    }, this);
+
+    scores = this.<span class="apidocCodeKeywordSpan">mergeScores</span>(scores, queryTokenScores, booleanType);
+  }, this);
+
+  scores = this.coordNorm(scores, docTokens, queryTokens.length);
+  return scores;
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.off" id="apidoc.element.elasticlunr.Index.prototype.off">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>off
+        <span class="apidocSignatureSpan">(name, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (name, fn) {
+  return this.eventEmitter.removeListener(name, fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.on" id="apidoc.element.elasticlunr.Index.prototype.on">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>on
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function () {
+  var args = Array.prototype.slice.call(arguments);
+  return this.eventEmitter.addListener.apply(this.eventEmitter, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ this._ref = 'id';
+ this.pipeline = new elasticlunr.Pipeline;
+ this.documentStore = new elasticlunr.DocumentStore;
+ this.index = {};
+ this.eventEmitter = new elasticlunr.EventEmitter;
+ this._idfCache = {};
+
+ this.<span class="apidocCodeKeywordSpan">on</span>('add', 'remove', 'update', (function () {
+   this._idfCache = {};
+ }).bind(this));
+};
+
+/**
+* Bind a handler to events being emitted by the index.
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.removeDoc" id="apidoc.element.elasticlunr.Index.prototype.removeDoc">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>removeDoc
+        <span class="apidocSignatureSpan">(doc, emitEvent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeDoc = function (doc, emitEvent) {
+  if (!doc) return;
+
+  var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+  var docRef = doc[this._ref];
+  if (!this.documentStore.hasDoc(docRef)) return;
+
+  this.documentStore.removeDoc(docRef);
+
+  this._fields.forEach(function (field) {
+    var fieldTokens = this.pipeline.run(elasticlunr.tokenizer(doc[field]));
+    fieldTokens.forEach(function (token) {
+      this.index[field].removeToken(token, docRef);
+    }, this);
+  }, this);
+
+  if (emitEvent) this.eventEmitter.emit('remove', doc, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+index.addDoc(doc2);
+```
+
+If your JSON document contains field that not configured in index, then that field will not be indexed, which means that field is
+ not searchable.
+
+## 3. Remove document from index
+
+Elasticlunr.js support remove a document from index, just provide JSON document to &lt;code&gt;elasticlunr.Index.prototype.&lt;
+span class="apidocCodeKeywordSpan"&gt;removeDoc()&lt;/code&gt; function.
+
+For example:
+```javascript
+var doc = {
+"id": 1,
+"title": "Oracle released its latest database Oracle 12g",
+"body": "Yestaday Oracle has released its new database Oracle 12g, this would make more money for this company and
+ lead to a nice profit report of annual year."
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.removeDocByRef" id="apidoc.element.elasticlunr.Index.prototype.removeDocByRef">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>removeDocByRef
+        <span class="apidocSignatureSpan">(docRef, emitEvent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeDocByRef = function (docRef, emitEvent) {
+  if (!docRef) return;
+  if (this.documentStore.isDocStored() === false) {
+    return;
+  }
+
+  if (!this.documentStore.hasDoc(docRef)) return;
+  var doc = this.documentStore.getDoc(docRef);
+  this.removeDoc(doc, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @see Index.prototype.remove
+* @see Index.prototype.add
+* @memberOf Index
+*/
+elasticlunr.Index.prototype.updateDoc = function (doc, emitEvent) {
+ var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+ this.<span class="apidocCodeKeywordSpan">removeDocByRef</span>(doc[this._ref], false);
+ this.addDoc(doc, false);
+
+ if (emitEvent) this.eventEmitter.emit('update', doc, this);
+};
+
+/**
+* Calculates the inverse document frequency for a token within the index of a field.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.saveDocument" id="apidoc.element.elasticlunr.Index.prototype.saveDocument">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>saveDocument
+        <span class="apidocSignatureSpan">(save)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveDocument = function (save) {
+  this.documentStore = new elasticlunr.DocumentStore(save);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If user do not want to store the original JSON documents, they could use the following setting:
+```javascript
+var index = elasticlunr(function () {
+    this.addField('title');
+    this.addField('body');
+    this.setRef('id');
+    this.<span class="apidocCodeKeywordSpan">saveDocument</span>(false);
+});
+```
+
+Then elasticlunr.js will not store the JSON documents, this will reduce the index size, but also bring some inconvenience such as
+ update a document or delete a document by document id or reference. Actually most of the time user will not udpate or delete a
+document from index.
+
+[API documentation](http://elasticlunr.com/docs/index.html) is available, as well as a [full working example](http://elasticlunr
+.com/example/index.html).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.search" id="apidoc.element.elasticlunr.Index.prototype.search">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>search
+        <span class="apidocSignatureSpan">(query, userConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (query, userConfig) {
+  if (!query) return [];
+
+  var configStr = null;
+  if (userConfig != null) {
+    configStr = JSON.stringify(userConfig);
+  }
+
+  var config = new elasticlunr.Configuration(configStr, this.getFields()).get();
+
+  var queryTokens = this.pipeline.run(elasticlunr.tokenizer(query));
+
+  var queryResults = {};
+
+  for (var field in config) {
+    var fieldSearchResults = this.fieldSearch(queryTokens, field, config);
+    var fieldBoost = config[field].boost;
+
+    for (var docRef in fieldSearchResults) {
+      fieldSearchResults[docRef] = fieldSearchResults[docRef] * fieldBoost;
+    }
+
+    for (var docRef in fieldSearchResults) {
+      if (docRef in queryResults) {
+        queryResults[docRef] += fieldSearchResults[docRef];
+      } else {
+        queryResults[docRef] = fieldSearchResults[docRef];
+      }
+    }
+  }
+
+  var results = [];
+  for (var docRef in queryResults) {
+    results.push({ref: docRef, score: queryResults[docRef]});
+  }
+
+  results.sort(function (a, b) { return b.score - a.score; });
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+index.addDoc(doc1);
+index.addDoc(doc2);
+```
+
+Then searching is as simple:
+
+```javascript
+index.<span class="apidocCodeKeywordSpan">search</span>("Oracle database profit");
+```
+
+Also, you could do query-time boosting by passing in a configuration.
+
+```javascript
+index.search("Oracle database profit", {
+fields: {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.setRef" id="apidoc.element.elasticlunr.Index.prototype.setRef">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>setRef
+        <span class="apidocSignatureSpan">(refName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setRef = function (refName) {
+  this._ref = refName;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A very simple search index can be created using the following scripts:
+
+```javascript
+var index = elasticlunr(function () {
+    this.addField('title');
+    this.addField('body');
+    this.<span class="apidocCodeKeywordSpan">setRef</span>('id');
+});
+```
+
+Adding documents to the index is as simple as:
+
+```javascript
+var doc1 = {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.toJSON" id="apidoc.element.elasticlunr.Index.prototype.toJSON">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  var indexJson = {};
+  this._fields.forEach(function (field) {
+    indexJson[field] = this.index[field].toJSON();
+  }, this);
+
+  return {
+    version: elasticlunr.version,
+    fields: this._fields,
+    ref: this._ref,
+    documentStore: this.documentStore.toJSON(),
+    index: indexJson,
+    pipeline: this.pipeline.toJSON()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @return {Object}
+ * @memberOf Index
+ */
+elasticlunr.Index.prototype.toJSON = function () {
+var indexJson = {};
+this._fields.forEach(function (field) {
+  indexJson[field] = this.index[field].<span class="apidocCodeKeywordSpan">toJSON</span>();
+}, this);
+
+return {
+  version: elasticlunr.version,
+  fields: this._fields,
+  ref: this._ref,
+  documentStore: this.documentStore.toJSON(),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.updateDoc" id="apidoc.element.elasticlunr.Index.prototype.updateDoc">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>updateDoc
+        <span class="apidocSignatureSpan">(doc, emitEvent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateDoc = function (doc, emitEvent) {
+  var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+  this.removeDocByRef(doc[this._ref], false);
+  this.addDoc(doc, false);
+
+  if (emitEvent) this.eventEmitter.emit('update', doc, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Index.prototype.use" id="apidoc.element.elasticlunr.Index.prototype.use">
+        function <span class="apidocSignatureSpan">elasticlunr.Index.prototype.</span>use
+        <span class="apidocSignatureSpan">(plugin)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function (plugin) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  args.unshift(this);
+  plugin.apply(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&lt;script src="lunr.de.js"&gt;&lt;/script&gt;
+```
+
+then, you could use elasticlunr.js as normal:
+```javascript
+var index = elasticlunr(function () {
+    // use the language (de)
+    this.<span class="apidocCodeKeywordSpan">use</span>(elasticlunr.de);
+    // then, the normal elasticlunr index initialization
+    this.addField('title')
+    this.addField('body')
+});
+```
+
+Pay attention to the special code:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.InvertedIndex" id="apidoc.module.elasticlunr.InvertedIndex">module elasticlunr.InvertedIndex</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.InvertedIndex" id="apidoc.element.elasticlunr.InvertedIndex.InvertedIndex">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>InvertedIndex
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">InvertedIndex = function () {
+  this.root = { docs: {}, df: 0 };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.load" id="apidoc.element.elasticlunr.InvertedIndex.load">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.</span>load
+        <span class="apidocSignatureSpan">(serialisedData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (serialisedData) {
+  var idx = new this;
+  idx.root = serialisedData.root;
+
+  return idx;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                  + elasticlunr.version + ' importing ' + serialisedData.version);
+}
+
+var idx = new this;
+
+idx._fields = serialisedData.fields;
+idx._ref = serialisedData.ref;
+idx.documentStore = elasticlunr.DocumentStore.<span class="apidocCodeKeywordSpan">load</span>(serialisedData.documentStore);
+idx.pipeline = elasticlunr.Pipeline.load(serialisedData.pipeline);
+idx.index = {};
+for (var field in serialisedData.index) {
+  idx.index[field] = elasticlunr.InvertedIndex.load(serialisedData.index[field]);
+}
+
+return idx;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.InvertedIndex.prototype" id="apidoc.module.elasticlunr.InvertedIndex.prototype">module elasticlunr.InvertedIndex.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.addToken" id="apidoc.element.elasticlunr.InvertedIndex.prototype.addToken">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>addToken
+        <span class="apidocSignatureSpan">(token, tokenInfo, root)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addToken = function (token, tokenInfo, root) {
+  var root = root || this.root,
+      idx = 0;
+
+  while (idx &lt;= token.length - 1) {
+    var key = token[idx];
+
+    if (!(key in root)) root[key] = {docs: {}, df: 0};
+    idx += 1;
+    root = root[key];
+  }
+
+  var docRef = tokenInfo.ref;
+  if (!root.docs[docRef]) {
+    // if this doc not exist, then add this doc
+    root.docs[docRef] = {tf: tokenInfo.tf};
+    root.df += 1;
+  } else {
+    // if this doc already exist, then update tokenInfo
+    root.docs[docRef] = {tf: tokenInfo.tf};
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      if (token in tokenCount) tokenCount[token] += 1;
+      else tokenCount[token] = 1;
+    }, this);
+
+    for (var token in tokenCount) {
+      var termFrequency = tokenCount[token];
+      termFrequency = Math.sqrt(termFrequency);
+      this.index[field].<span class="apidocCodeKeywordSpan">addToken</span>(token, { ref: docRef, tf: termFrequency });
+    }
+  }, this);
+
+  if (emitEvent) this.eventEmitter.emit('add', doc, this);
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.expandToken" id="apidoc.element.elasticlunr.InvertedIndex.prototype.expandToken">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>expandToken
+        <span class="apidocSignatureSpan">(token, memo, root)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expandToken = function (token, memo, root) {
+  if (token == null || token == '') return [];
+  var memo = memo || [];
+
+  if (root == void 0) {
+    root = this.getNode(token);
+    if (root == null) return memo;
+  }
+
+  if (root.df &gt; 0) memo.push(token);
+
+  for (var key in root) {
+    if (key === 'docs') continue;
+    if (key === 'df') continue;
+    this.expandToken(token + key, memo, root[key]);
+  }
+
+  return memo;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (boost === 0) {
+  return;
+}
+
+queryTokens.forEach(function (token) {
+  var tokens = [token];
+  if (expand == true) {
+    tokens = this.index[fieldName].<span class="apidocCodeKeywordSpan">expandToken</span>(token);
+  }
+  // Consider every query token in turn. If expanded, each query token
+  // corresponds to a set of tokens, which is all tokens in the
+  // index matching the pattern queryToken* .
+  // For the set of tokens corresponding to a query token, find and score
+  // all matching documents. Store those scores in queryTokenScores,
+  // keyed by docRef.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getDocFreq" id="apidoc.element.elasticlunr.InvertedIndex.prototype.getDocFreq">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getDocFreq
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDocFreq = function (token) {
+  var node = this.getNode(token);
+
+  if (node == null) {
+    return 0;
+  }
+
+  return node.df;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @private
+ * @memberOf Index
+ */
+elasticlunr.Index.prototype.idf = function (term, field) {
+  var cacheKey = "@" + field + '/' + term;
+  if (Object.prototype.hasOwnProperty.call(this._idfCache, cacheKey)) return this._idfCache[cacheKey];
+
+  var df = this.index[field].<span class="apidocCodeKeywordSpan">getDocFreq</span>(term);
+  var idf = 1 + Math.log(this.documentStore.length / (df + 1));
+  this._idfCache[cacheKey] = idf;
+
+  return idf;
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getDocs" id="apidoc.element.elasticlunr.InvertedIndex.prototype.getDocs">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getDocs
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDocs = function (token) {
+  var node = this.getNode(token);
+  if (node == null) {
+    return {};
+  }
+
+  return node.docs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Furthermore, since when booleanType is AND, additional
+// query tokens can't add new documents to the result set, use the
+// current document set to limit the processing of each new query
+// token for efficiency (i.e., incremental intersection).
+
+var queryTokenScores = {};
+tokens.forEach(function (key) {
+  var docs = this.index[fieldName].<span class="apidocCodeKeywordSpan">getDocs</span>(key);
+  var idf = this.idf(key, fieldName);
+
+  if (scores &amp;&amp; booleanType == 'AND') {
+      // special case, we can rule out documents that have been
+      // already been filtered out because they weren't scored
+      // by previous query token passes.
+      var filteredDocs = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getNode" id="apidoc.element.elasticlunr.InvertedIndex.prototype.getNode">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getNode
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNode = function (token) {
+  if (!token) return null;
+
+  var node = this.root;
+
+  for (var i = 0; i &lt; token.length; i++) {
+    if (!node[token[i]]) return null;
+    node = node[token[i]];
+  }
+
+  return node;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ *
+ * @param {String} token The token to get the documents for.
+ * @return {Object}
+ * @memberOf InvertedIndex
+ */
+elasticlunr.InvertedIndex.prototype.getDocs = function (token) {
+  var node = this.<span class="apidocCodeKeywordSpan">getNode</span>(token);
+  if (node == null) {
+    return {};
+  }
+
+  return node.docs;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.getTermFrequency" id="apidoc.element.elasticlunr.InvertedIndex.prototype.getTermFrequency">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>getTermFrequency
+        <span class="apidocSignatureSpan">(token, docRef)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTermFrequency = function (token, docRef) {
+  var node = this.getNode(token);
+
+  if (node == null) {
+    return 0;
+  }
+
+  if (!(docRef in node.docs)) {
+    return 0;
+  }
+
+  return node.docs[docRef].tf;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      // so expanded token should not be added into docTokens, if added, this will pollute the
+      // coordNorm
+      if (key == token) {
+this.fieldSearchStats(docTokens, key, docs);
+      }
+
+      for (var docRef in docs) {
+var tf = this.index[fieldName].<span class="apidocCodeKeywordSpan">getTermFrequency</span>(key, docRef);
+var fieldLength = this.documentStore.getFieldLength(docRef, fieldName);
+var fieldLengthNorm = 1;
+if (fieldLength != 0) {
+  fieldLengthNorm = 1 / Math.sqrt(fieldLength);
+}
+
+var penality = 1;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.hasToken" id="apidoc.element.elasticlunr.InvertedIndex.prototype.hasToken">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>hasToken
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasToken = function (token) {
+  if (!token) return false;
+
+  var node = this.root;
+
+  for (var i = 0; i &lt; token.length; i++) {
+    if (!node[token[i]]) return false;
+    node = node[token[i]];
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.removeToken" id="apidoc.element.elasticlunr.InvertedIndex.prototype.removeToken">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>removeToken
+        <span class="apidocSignatureSpan">(token, ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeToken = function (token, ref) {
+  if (!token) return;
+  var node = this.getNode(token);
+
+  if (node == null) return;
+
+  if (ref in node.docs) {
+    delete node.docs[ref];
+    node.df -= 1;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!this.documentStore.hasDoc(docRef)) return;
+
+  this.documentStore.removeDoc(docRef);
+
+  this._fields.forEach(function (field) {
+    var fieldTokens = this.pipeline.run(elasticlunr.tokenizer(doc[field]));
+    fieldTokens.forEach(function (token) {
+      this.index[field].<span class="apidocCodeKeywordSpan">removeToken</span>(token, docRef);
+    }, this);
+  }, this);
+
+  if (emitEvent) this.eventEmitter.emit('remove', doc, this);
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.InvertedIndex.prototype.toJSON" id="apidoc.element.elasticlunr.InvertedIndex.prototype.toJSON">
+        function <span class="apidocSignatureSpan">elasticlunr.InvertedIndex.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return {
+    root: this.root
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @return {Object}
+ * @memberOf Index
+ */
+elasticlunr.Index.prototype.toJSON = function () {
+var indexJson = {};
+this._fields.forEach(function (field) {
+  indexJson[field] = this.index[field].<span class="apidocCodeKeywordSpan">toJSON</span>();
+}, this);
+
+return {
+  version: elasticlunr.version,
+  fields: this._fields,
+  ref: this._ref,
+  documentStore: this.documentStore.toJSON(),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.Pipeline" id="apidoc.module.elasticlunr.Pipeline">module elasticlunr.Pipeline</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.Pipeline" id="apidoc.element.elasticlunr.Pipeline.Pipeline">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>Pipeline
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pipeline = function () {
+  this._queue = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.getRegisteredFunction" id="apidoc.element.elasticlunr.Pipeline.getRegisteredFunction">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>getRegisteredFunction
+        <span class="apidocSignatureSpan">(label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRegisteredFunction = function (label) {
+  if ((label in elasticlunr.Pipeline.registeredFunctions) !== true) {
+    return null;
+  }
+
+  return elasticlunr.Pipeline.registeredFunctions[label];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @return {elasticlunr.Pipeline}
+ * @memberOf Pipeline
+ */
+elasticlunr.Pipeline.load = function (serialised) {
+var pipeline = new elasticlunr.Pipeline;
+
+serialised.forEach(function (fnName) {
+  var fn = elasticlunr.Pipeline.<span class="apidocCodeKeywordSpan">getRegisteredFunction</span>(fnName);
+
+  if (fn) {
+    pipeline.add(fn);
+  } else {
+    throw new Error('Cannot load un-registered function: ' + fnName);
+  }
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.load" id="apidoc.element.elasticlunr.Pipeline.load">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>load
+        <span class="apidocSignatureSpan">(serialised)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (serialised) {
+  var pipeline = new elasticlunr.Pipeline;
+
+  serialised.forEach(function (fnName) {
+    var fn = elasticlunr.Pipeline.getRegisteredFunction(fnName);
+
+    if (fn) {
+      pipeline.add(fn);
+    } else {
+      throw new Error('Cannot load un-registered function: ' + fnName);
+    }
+  });
+
+  return pipeline;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                  + elasticlunr.version + ' importing ' + serialisedData.version);
+}
+
+var idx = new this;
+
+idx._fields = serialisedData.fields;
+idx._ref = serialisedData.ref;
+idx.documentStore = elasticlunr.DocumentStore.<span class="apidocCodeKeywordSpan">load</span>(serialisedData.documentStore);
+idx.pipeline = elasticlunr.Pipeline.load(serialisedData.pipeline);
+idx.index = {};
+for (var field in serialisedData.index) {
+  idx.index[field] = elasticlunr.InvertedIndex.load(serialisedData.index[field]);
+}
+
+return idx;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.registerFunction" id="apidoc.element.elasticlunr.Pipeline.registerFunction">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>registerFunction
+        <span class="apidocSignatureSpan">(fn, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerFunction = function (fn, label) {
+  if (label in elasticlunr.Pipeline.registeredFunctions) {
+    elasticlunr.utils.warn('Overwriting existing registered function: ' + label);
+  }
+
+  fn.label = label;
+  elasticlunr.Pipeline.registeredFunctions[label] = fn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    return w;
+  };
+
+  return porterStemmer;
+})();
+
+elasticlunr.Pipeline.<span class="apidocCodeKeywordSpan">registerFunction</span>(elasticlunr.stemmer, 'stemmer');
+/*!
+ * elasticlunr.stopWordFilter
+ * Copyright (C) 2016 Oliver Nightingale
+ * Copyright (C) 2016 Wei Song
+ */
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.warnIfFunctionNotRegistered" id="apidoc.element.elasticlunr.Pipeline.warnIfFunctionNotRegistered">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.</span>warnIfFunctionNotRegistered
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warnIfFunctionNotRegistered = function (fn) {
+  var isRegistered = fn.label &amp;&amp; (fn.label in this.registeredFunctions);
+
+  if (!isRegistered) {
+    elasticlunr.utils.warn('Function is not registered with pipeline. This may cause problems when serialising the index.\n', fn
+);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param {Function} functions Any number of functions to add to the pipeline.
+* @memberOf Pipeline
+*/
+elasticlunr.Pipeline.prototype.add = function () {
+ var fns = Array.prototype.slice.call(arguments);
+
+ fns.forEach(function (fn) {
+   elasticlunr.Pipeline.<span class="apidocCodeKeywordSpan">warnIfFunctionNotRegistered</span>(fn);
+   this._queue.push(fn);
+ }, this);
+};
+
+/**
+* Adds a single function after a function that already exists in the
+* pipeline.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.Pipeline.prototype" id="apidoc.module.elasticlunr.Pipeline.prototype">module elasticlunr.Pipeline.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.add" id="apidoc.element.elasticlunr.Pipeline.prototype.add">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>add
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function () {
+  var fns = Array.prototype.slice.call(arguments);
+
+  fns.forEach(function (fn) {
+    elasticlunr.Pipeline.warnIfFunctionNotRegistered(fn);
+    this._queue.push(fn);
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*     var idx = elasticlunr(function () {
+*       this.addField('id');
+*       this.addField('title');
+*       this.addField('body');
+*
+*       //this.setRef('id'); // default ref is 'id'
+*
+*       this.pipeline.<span class="apidocCodeKeywordSpan">add</span>(function () {
+*         // some custom pipeline function
+*       });
+*     });
+*
+*    idx.addDoc({
+*      id: 1,
+*      title: 'Oracle released database 12g',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.after" id="apidoc.element.elasticlunr.Pipeline.prototype.after">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>after
+        <span class="apidocSignatureSpan">(existingFn, newFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">after = function (existingFn, newFn) {
+  elasticlunr.Pipeline.warnIfFunctionNotRegistered(newFn);
+
+  var pos = this._queue.indexOf(existingFn);
+  if (pos === -1) {
+    throw new Error('Cannot find existingFn');
+  }
+
+  this._queue.splice(pos + 1, 0, newFn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.before" id="apidoc.element.elasticlunr.Pipeline.prototype.before">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>before
+        <span class="apidocSignatureSpan">(existingFn, newFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">before = function (existingFn, newFn) {
+  elasticlunr.Pipeline.warnIfFunctionNotRegistered(newFn);
+
+  var pos = this._queue.indexOf(existingFn);
+  if (pos === -1) {
+    throw new Error('Cannot find existingFn');
+  }
+
+  this._queue.splice(pos, 0, newFn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.get" id="apidoc.element.elasticlunr.Pipeline.prototype.get">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>get
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function () {
+  return this._queue;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!query) return [];
+
+var configStr = null;
+if (userConfig != null) {
+  configStr = JSON.stringify(userConfig);
+}
+
+var config = new elasticlunr.Configuration(configStr, this.getFields()).<span class="apidocCodeKeywordSpan">get</span>();
+
+var queryTokens = this.pipeline.run(elasticlunr.tokenizer(query));
+
+var queryResults = {};
+
+for (var field in config) {
+  var fieldSearchResults = this.fieldSearch(queryTokens, field, config);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.remove" id="apidoc.element.elasticlunr.Pipeline.prototype.remove">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>remove
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (fn) {
+  var pos = this._queue.indexOf(fn);
+  if (pos === -1) {
+    return;
+  }
+
+  this._queue.splice(pos, 1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.reset" id="apidoc.element.elasticlunr.Pipeline.prototype.reset">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+  this._queue = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Build default search configuration.
+ *
+ * @param {Array} fields fields of index instance
+ */
+elasticlunr.Configuration.prototype.buildDefaultConfig = function (fields) {
+this.<span class="apidocCodeKeywordSpan">reset</span>();
+fields.forEach(function (field) {
+  this.config[field] = {
+    boost: 1,
+    bool: "OR",
+    expand: false
+  };
+}, this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.run" id="apidoc.element.elasticlunr.Pipeline.prototype.run">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>run
+        <span class="apidocSignatureSpan">(tokens)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (tokens) {
+  var out = [],
+      tokenLength = tokens.length,
+      pipelineLength = this._queue.length;
+
+  for (var i = 0; i &lt; tokenLength; i++) {
+    var token = tokens[i];
+
+    for (var j = 0; j &lt; pipelineLength; j++) {
+      token = this._queue[j](token, i, tokens);
+      if (token === void 0 || token === null) break;
+    };
+
+    if (token !== void 0 &amp;&amp; token !== null) out.push(token);
+  };
+
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!doc) return;
+  var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+  var docRef = doc[this._ref];
+
+  this.documentStore.addDoc(docRef, doc);
+  this._fields.forEach(function (field) {
+var fieldTokens = this.pipeline.<span class="apidocCodeKeywordSpan">run</span>(elasticlunr.tokenizer(doc[field]));
+this.documentStore.addFieldLength(docRef, field, fieldTokens.length);
+
+var tokenCount = {};
+fieldTokens.forEach(function (token) {
+  if (token in tokenCount) tokenCount[token] += 1;
+  else tokenCount[token] = 1;
+}, this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.prototype.toJSON" id="apidoc.element.elasticlunr.Pipeline.prototype.toJSON">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return this._queue.map(function (fn) {
+    elasticlunr.Pipeline.warnIfFunctionNotRegistered(fn);
+    return fn.label;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @return {Object}
+ * @memberOf Index
+ */
+elasticlunr.Index.prototype.toJSON = function () {
+var indexJson = {};
+this._fields.forEach(function (field) {
+  indexJson[field] = this.index[field].<span class="apidocCodeKeywordSpan">toJSON</span>();
+}, this);
+
+return {
+  version: elasticlunr.version,
+  fields: this._fields,
+  ref: this._ref,
+  documentStore: this.documentStore.toJSON(),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.Pipeline.registeredFunctions" id="apidoc.module.elasticlunr.Pipeline.registeredFunctions">module elasticlunr.Pipeline.registeredFunctions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.registeredFunctions.stemmer" id="apidoc.element.elasticlunr.Pipeline.registeredFunctions.stemmer">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.registeredFunctions.</span>stemmer
+        <span class="apidocSignatureSpan">(w)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function porterStemmer(w) {
+  var   stem,
+    suffix,
+    firstch,
+    re,
+    re2,
+    re3,
+    re4;
+
+  if (w.length &lt; 3) { return w; }
+
+  firstch = w.substr(0,1);
+  if (firstch == "y") {
+    w = firstch.toUpperCase() + w.substr(1);
+  }
+
+  // Step 1a
+  re = re_1a
+  re2 = re2_1a;
+
+  if (re.test(w)) { w = w.replace(re,"$1$2"); }
+  else if (re2.test(w)) { w = w.replace(re2,"$1$2"); }
+
+  // Step 1b
+  re = re_1b;
+  re2 = re2_1b;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    re = re_mgr0;
+    if (re.test(fp[1])) {
+      re = re_1b_2;
+      w = w.replace(re,"");
+    }
+  } else if (re2.test(w)) {
+    var fp = re2.exec(w);
+    stem = fp[1];
+    re2 = re_s_v;
+    if (re2.test(stem)) {
+      w = stem;
+      re2 = re2_1b_2;
+      re3 = re3_1b_2;
+      re4 = re4_1b_2;
+      if (re2.test(w)) {  w = w + "e"; }
+      else if (re3.test(w)) { re = re_1b_2; w = w.replace(re,""); }
+      else if (re4.test(w)) { w = w + "e"; }
+    }
+  }
+
+  // Step 1c - replace suffix y or Y by i if preceded by a non-vowel which is not the first letter of the word (so cry -&gt; cri, by
+ -&gt; by, say -&gt; say)
+  re = re_1c;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    w = stem + "i";
+  }
+
+  // Step 2
+  re = re_2;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    suffix = fp[2];
+    re = re_mgr0;
+    if (re.test(stem)) {
+      w = stem + step2list[suffix];
+    }
+  }
+
+  // Step 3
+  re = re_3;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    suffix = fp[2];
+    re = re_mgr0;
+    if (re.test(stem)) {
+      w = stem + step3list[suffix];
+    }
+  }
+
+  // Step 4
+  re = re_4;
+  re2 = re2_4;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    re = re_mgr1;
+    if (re.test(stem)) {
+      w = stem;
+    }
+  } else if (re2.test(w)) {
+    var fp = re2.exec(w);
+    stem = fp[1] + fp[2];
+    re2 = re_mgr1;
+    if (re2.test(stem)) {
+      w = stem;
+    }
+  }
+
+  // Step 5
+  re = re_5;
+  if (re.test(w)) {
+    var fp = re.exec(w);
+    stem = fp[1];
+    re = re_mgr1;
+    re2 = re_meq1;
+    re3 = re3_5;
+    if (re.test(stem) || (re2.test(stem) &amp;&amp; !(re3.test(stem)))) {
+      w = stem;
+    }
+  }
+
+  re = re_5_1;
+  re2 = re_mgr1;
+  if (re.test(w) &amp;&amp; re2.test(w)) {
+    re = re_1b_2;
+    w = w.replace(re,"");
+  }
+
+  // and turn initial Y back to y
+
+  if (firstch == "y") {
+    w = firstch.toLowerCase() + w.substr(1);
+  }
+
+  return w;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.registeredFunctions.stopWordFilter" id="apidoc.element.elasticlunr.Pipeline.registeredFunctions.stopWordFilter">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.registeredFunctions.</span>stopWordFilter
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopWordFilter = function (token) {
+  if (token &amp;&amp; elasticlunr.stopWordFilter.stopWords[token] !== true) {
+    return token;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.Pipeline.registeredFunctions.trimmer" id="apidoc.element.elasticlunr.Pipeline.registeredFunctions.trimmer">
+        function <span class="apidocSignatureSpan">elasticlunr.Pipeline.registeredFunctions.</span>trimmer
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trimmer = function (token) {
+  if (token === null || token === undefined) {
+    throw new Error('token should not be undefined');
+  }
+
+  return token
+    .replace(/^\W+/, '')
+    .replace(/\W+$/, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.SortedSet" id="apidoc.module.elasticlunr.SortedSet">module elasticlunr.SortedSet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.SortedSet" id="apidoc.element.elasticlunr.SortedSet.SortedSet">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>SortedSet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SortedSet = function () {
+  this.length = 0
+  this.elements = []
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.load" id="apidoc.element.elasticlunr.SortedSet.load">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.</span>load
+        <span class="apidocSignatureSpan">(serialisedData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">load = function (serialisedData) {
+  var set = new this
+
+  set.elements = serialisedData
+  set.length = serialisedData.length
+
+  return set
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                  + elasticlunr.version + ' importing ' + serialisedData.version);
+}
+
+var idx = new this;
+
+idx._fields = serialisedData.fields;
+idx._ref = serialisedData.ref;
+idx.documentStore = elasticlunr.DocumentStore.<span class="apidocCodeKeywordSpan">load</span>(serialisedData.documentStore);
+idx.pipeline = elasticlunr.Pipeline.load(serialisedData.pipeline);
+idx.index = {};
+for (var field in serialisedData.index) {
+  idx.index[field] = elasticlunr.InvertedIndex.load(serialisedData.index[field]);
+}
+
+return idx;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.SortedSet.prototype" id="apidoc.module.elasticlunr.SortedSet.prototype">module elasticlunr.SortedSet.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.add" id="apidoc.element.elasticlunr.SortedSet.prototype.add">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>add
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function () {
+  var i, element
+
+  for (i = 0; i &lt; arguments.length; i++) {
+    element = arguments[i]
+    if (~this.indexOf(element)) continue
+    this.elements.splice(this.locationFor(element), 0, element)
+  }
+
+  this.length = this.elements.length
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*     var idx = elasticlunr(function () {
+*       this.addField('id');
+*       this.addField('title');
+*       this.addField('body');
+*
+*       //this.setRef('id'); // default ref is 'id'
+*
+*       this.pipeline.<span class="apidocCodeKeywordSpan">add</span>(function () {
+*         // some custom pipeline function
+*       });
+*     });
+*
+*    idx.addDoc({
+*      id: 1,
+*      title: 'Oracle released database 12g',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.clone" id="apidoc.element.elasticlunr.SortedSet.prototype.clone">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>clone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function () {
+  var clone = new lunr.SortedSet
+
+  clone.elements = this.toArray()
+  clone.length = clone.elements.length
+
+  return clone
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (this.length &gt;= otherSet.length) {
+    longSet = this, shortSet = otherSet
+  } else {
+    longSet = otherSet, shortSet = this
+  }
+
+  unionSet = longSet.<span class="apidocCodeKeywordSpan">clone</span>()
+
+  for(var i = 0, shortSetElements = shortSet.toArray(); i &lt; shortSetElements.length; i++){
+    unionSet.add(shortSetElements[i])
+  }
+
+  return unionSet
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.forEach" id="apidoc.element.elasticlunr.SortedSet.prototype.forEach">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>forEach
+        <span class="apidocSignatureSpan">(fn, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forEach = function (fn, ctx) {
+  return this.elements.forEach(fn, ctx)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+elasticlunr.EventEmitter.prototype.addListener = function () {
+ var args = Array.prototype.slice.call(arguments),
+     fn = args.pop(),
+     names = args;
+
+ if (typeof fn !== "function") throw new TypeError ("last argument must be a function");
+
+ names.<span class="apidocCodeKeywordSpan">forEach</span>(function (name) {
+   if (!this.hasHandler(name)) this.events[name] = [];
+   this.events[name].push(fn);
+ }, this);
+};
+
+/**
+* Removes a handler function from a specific event.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.indexOf" id="apidoc.element.elasticlunr.SortedSet.prototype.indexOf">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>indexOf
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">indexOf = function (elem) {
+  var start = 0,
+      end = this.elements.length,
+      sectionLength = end - start,
+      pivot = start + Math.floor(sectionLength / 2),
+      pivotElem = this.elements[pivot]
+
+  while (sectionLength &gt; 1) {
+    if (pivotElem === elem) return pivot
+
+    if (pivotElem &lt; elem) start = pivot
+    if (pivotElem &gt; elem) end = pivot
+
+    sectionLength = end - start
+    pivot = start + Math.floor(sectionLength / 2)
+    pivotElem = this.elements[pivot]
+  }
+
+  if (pivotElem === elem) return pivot
+
+  return -1
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {String} eventName The name of the event to remove this function from.
+ * @param {Function} fn The function to remove from an event.
+ * @memberOf EventEmitter
+ */
+elasticlunr.EventEmitter.prototype.removeListener = function (name, fn) {
+  if (!this.hasHandler(name)) return;
+
+  var fnIndex = this.events[name].<span class="apidocCodeKeywordSpan">indexOf</span>(fn);
+  if (fnIndex === -1) return;
+
+  this.events[name].splice(fnIndex, 1);
+
+  if (this.events[name].length == 0) delete this.events[name];
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.intersect" id="apidoc.element.elasticlunr.SortedSet.prototype.intersect">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>intersect
+        <span class="apidocSignatureSpan">(otherSet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">intersect = function (otherSet) {
+  var intersectSet = new lunr.SortedSet,
+      i = 0, j = 0,
+      a_len = this.length, b_len = otherSet.length,
+      a = this.elements, b = otherSet.elements
+
+  while (true) {
+    if (i &gt; a_len - 1 || j &gt; b_len - 1) break
+
+    if (a[i] === b[j]) {
+      intersectSet.add(a[i])
+      i++, j++
+      continue
+    }
+
+    if (a[i] &lt; b[j]) {
+      i++
+      continue
+    }
+
+    if (a[i] &gt; b[j]) {
+      j++
+      continue
+    }
+  };
+
+  return intersectSet
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.locationFor" id="apidoc.element.elasticlunr.SortedSet.prototype.locationFor">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>locationFor
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">locationFor = function (elem) {
+  var start = 0,
+      end = this.elements.length,
+      sectionLength = end - start,
+      pivot = start + Math.floor(sectionLength / 2),
+      pivotElem = this.elements[pivot]
+
+  while (sectionLength &gt; 1) {
+    if (pivotElem &lt; elem) start = pivot
+    if (pivotElem &gt; elem) end = pivot
+
+    sectionLength = end - start
+    pivot = start + Math.floor(sectionLength / 2)
+    pivotElem = this.elements[pivot]
+  }
+
+  if (pivotElem &gt; elem) return pivot
+  if (pivotElem &lt; elem) return pivot + 1
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+lunr.SortedSet.prototype.add = function () {
+ var i, element
+
+ for (i = 0; i &lt; arguments.length; i++) {
+   element = arguments[i]
+   if (~this.indexOf(element)) continue
+   this.elements.splice(this.<span class="apidocCodeKeywordSpan">locationFor</span>(element), 0, element)
+ }
+
+ this.length = this.elements.length
+}
+
+/**
+* Converts this sorted set into an array.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.map" id="apidoc.element.elasticlunr.SortedSet.prototype.map">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>map
+        <span class="apidocSignatureSpan">(fn, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (fn, ctx) {
+  return this.elements.map(fn, ctx)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (token === null || token === undefined) {
+    return false;
+  }
+
+  return true;
+});
+
+arr = arr.<span class="apidocCodeKeywordSpan">map</span>(function (t) {
+  return elasticlunr.utils.toString(t).toLowerCase();
+});
+
+var out = [];
+arr.forEach(function(item) {
+  var tokens = item.split(elasticlunr.tokenizer.seperator);
+  out = out.concat(tokens);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.toArray" id="apidoc.element.elasticlunr.SortedSet.prototype.toArray">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>toArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toArray = function () {
+  return this.elements.slice()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @returns {lunr.SortedSet}
+* @memberOf SortedSet
+*/
+lunr.SortedSet.prototype.clone = function () {
+ var clone = new lunr.SortedSet
+
+ clone.elements = this.<span class="apidocCodeKeywordSpan">toArray</span>()
+ clone.length = clone.elements.length
+
+ return clone
+}
+
+/**
+* Creates a new lunr.SortedSet that contains the elements in the union
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.toJSON" id="apidoc.element.elasticlunr.SortedSet.prototype.toJSON">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return this.toArray()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @return {Object}
+ * @memberOf Index
+ */
+elasticlunr.Index.prototype.toJSON = function () {
+var indexJson = {};
+this._fields.forEach(function (field) {
+  indexJson[field] = this.index[field].<span class="apidocCodeKeywordSpan">toJSON</span>();
+}, this);
+
+return {
+  version: elasticlunr.version,
+  fields: this._fields,
+  ref: this._ref,
+  documentStore: this.documentStore.toJSON(),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.SortedSet.prototype.union" id="apidoc.element.elasticlunr.SortedSet.prototype.union">
+        function <span class="apidocSignatureSpan">elasticlunr.SortedSet.prototype.</span>union
+        <span class="apidocSignatureSpan">(otherSet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">union = function (otherSet) {
+  var longSet, shortSet, unionSet
+
+  if (this.length &gt;= otherSet.length) {
+    longSet = this, shortSet = otherSet
+  } else {
+    longSet = otherSet, shortSet = this
+  }
+
+  unionSet = longSet.clone()
+
+  for(var i = 0, shortSetElements = shortSet.toArray(); i &lt; shortSetElements.length; i++){
+    unionSet.add(shortSetElements[i])
+  }
+
+  return unionSet
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.tokenizer" id="apidoc.module.elasticlunr.tokenizer">module elasticlunr.tokenizer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.tokenizer.tokenizer" id="apidoc.element.elasticlunr.tokenizer.tokenizer">
+        function <span class="apidocSignatureSpan">elasticlunr.</span>tokenizer
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tokenizer = function (str) {
+  if (!arguments.length || str === null || str === undefined) return [];
+  if (Array.isArray(str)) {
+    var arr = str.filter(function(token) {
+      if (token === null || token === undefined) {
+        return false;
+      }
+
+      return true;
+    });
+
+    arr = arr.map(function (t) {
+      return elasticlunr.utils.toString(t).toLowerCase();
+    });
+
+    var out = [];
+    arr.forEach(function(item) {
+      var tokens = item.split(elasticlunr.tokenizer.seperator);
+      out = out.concat(tokens);
+    }, this);
+
+    return out;
+  }
+
+  return str.toString().trim().toLowerCase().split(elasticlunr.tokenizer.seperator);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (!doc) return;
+  var emitEvent = emitEvent === undefined ? true : emitEvent;
+
+  var docRef = doc[this._ref];
+
+  this.documentStore.addDoc(docRef, doc);
+  this._fields.forEach(function (field) {
+var fieldTokens = this.pipeline.run(elasticlunr.<span class="apidocCodeKeywordSpan">tokenizer</span>(doc[field]));
+this.documentStore.addFieldLength(docRef, field, fieldTokens.length);
+
+var tokenCount = {};
+fieldTokens.forEach(function (token) {
+  if (token in tokenCount) tokenCount[token] += 1;
+  else tokenCount[token] = 1;
+}, this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.tokenizer.getSeperator" id="apidoc.element.elasticlunr.tokenizer.getSeperator">
+        function <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>getSeperator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSeperator = function () {
+    return elasticlunr.tokenizer.seperator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.tokenizer.resetSeperator" id="apidoc.element.elasticlunr.tokenizer.resetSeperator">
+        function <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>resetSeperator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetSeperator = function () {
+    elasticlunr.tokenizer.seperator = elasticlunr.tokenizer.defaultSeperator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.tokenizer.setSeperator" id="apidoc.element.elasticlunr.tokenizer.setSeperator">
+        function <span class="apidocSignatureSpan">elasticlunr.tokenizer.</span>setSeperator
+        <span class="apidocSignatureSpan">(sep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSeperator = function (sep) {
+    if (sep !== null &amp;&amp; sep !== undefined &amp;&amp; typeof(sep) === 'object') {
+        elasticlunr.tokenizer.seperator = sep;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticlunr.utils" id="apidoc.module.elasticlunr.utils">module elasticlunr.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.utils.toString" id="apidoc.element.elasticlunr.utils.toString">
+        function <span class="apidocSignatureSpan">elasticlunr.utils.</span>toString
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function (obj) {
+  if (obj === void 0 || obj === null) {
+    return "";
+  }
+
+  return obj.toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @memberOf Utils
+*/
+elasticlunr.utils.toString = function (obj) {
+ if (obj === void 0 || obj === null) {
+   return "";
+ }
+
+ return obj.<span class="apidocCodeKeywordSpan">toString</span>();
+};
+/*!
+* elasticlunr.EventEmitter
+* Copyright (C) 2016 Oliver Nightingale
+* Copyright (C) 2016 Wei Song
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticlunr.utils.warn" id="apidoc.element.elasticlunr.utils.warn">
+        function <span class="apidocSignatureSpan">elasticlunr.utils.</span>warn
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (message) {
+  if (global.console &amp;&amp; console.warn) {
+    console.warn(message);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* @param {String} message The message to be printed.
+* @memberOf Utils
+*/
+elasticlunr.utils.warn = (function (global) {
+ return function (message) {
+   if (global.console &amp;&amp; console.warn) {
+     console.<span class="apidocCodeKeywordSpan">warn</span>(message);
+   }
+ };
+})(this);
+
+/**
+* Convert an object to string.
+*
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
